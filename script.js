@@ -35,5 +35,12 @@ const generateAnswer = () => {
   const number = Math.floor(Math.random() * 5);
   answer.innerHTML = `Odpowiedź:${answersArr[number]}`;
 };
+const enterCheck = (event) => {
+  if (event.key === "Enter") {
+    shakeBall();
+  }
+};
+
 
 ball.addEventListener("click", shakeBall);
+input.addEventListener("keyup", enterCheck);
